@@ -43,7 +43,9 @@ require 'pages/header.php'
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="false"> Total Post</a></li>
             <li class=""><a href="#tab3default" data-toggle="tab" aria-expanded="false"> Draft </a></li>
+            <!-- Pada draft User pada tabel asksi hanya bisa mengakses button edit saja,untuk accept dan delete hanya dimiliki oleh admin-->
             <li class=""><a href="#tab4default" data-toggle="tab" aria-expanded="false"> Blocked Blog </a></li>
+            <!-- Pada blokced post hanya dimiliki oleh admin-->
           </ul>
         </div>
         <div class="panel-body">

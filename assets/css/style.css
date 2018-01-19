@@ -4215,9 +4215,8 @@ background-color:#0e76a8;
 }
 
 .btn-primary:hover {
-    color: #007e6c;
-    background-color: #fff;
-    border: 1px solid #007e6c;
+    color: #fff;
+    background-color: #056d5e;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     z-index: 2;

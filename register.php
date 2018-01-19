@@ -25,6 +25,14 @@ require 'pages/header.php'
                                 <div class="line"></div>
                             </h3>
                             <form method="post" id="userRegisterFrm" class="signin-form" name="userRegisterFrm">
+                              <div class="form-group" >
+                                <label for="exampleInputEmail1">Status Pengguna</label>
+                                <select class="form-control select2" name="category" >
+                                  <option value="0">Pilih Status</option>
+                                  <option value="1">Studentpreneur</option>
+                                  <option value="2">Investor</option>
+                                </select>
+                              </div>
                                 <div class="form-group">
                                     <label for="usr">Nama Lengkap</label>
                                     <input type="text" placeholder="Husein Indra Kusuma" name="fName" class="form-control" required="">

@@ -11,13 +11,14 @@ require 'pages/header.php'
 
 
             <div class="welcome">
-              <div class="col-lg-8 col-md-8">
+              <div class="col-lg-12" style="padding: 0% 10%;">
               <h3 class="title animated fadeInDown">
-                Together We Achieve
+                 Mewujudkan Enterpreneur Mahasiswa yang Dimulai dari Kampus
               </h3>
               <div class="subtitle animated fadeInDown animation-delay-1">
                 <p class="caption-text animated typewrite" data-period="1000" data-type='[ "Do what you love .","Kampus are full of great ideas .", " Discover and engage your business ." ]'>
               </div>
+              <button class="btn btn-primary btn-sm" style="padding:5px 20px;font-size:18px;"><a href="#" style="color:#fff;">Mulai Investasi</a></button>
             </div>
 
             </div>

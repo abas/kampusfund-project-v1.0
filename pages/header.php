@@ -42,7 +42,7 @@
 </head>
 <body class="home-2">
   <header>
-
+<!-- Pada header fungsi button profile dan alert hanya terlihat ketika sudah login-->
     <nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="container-fluid">
