@@ -1827,14 +1827,23 @@ header .navbar-nav>li>.dropdown-menu:before {
     padding-bottom: 0px;
     padding-top: 30px;
 }
-
-.avatar
+.avatar-campaign
 {
   padding: 0px 80px;
 }
-.avatar img{
+.avatar-campaign img{
     height: 150px;
     width: 150px;
+    object-fit: cover;
+
+}
+.avatar
+{
+  padding: 0px 50px;
+}
+.avatar img{
+    height: 120px;
+    width: 120px;
     object-fit: cover;
 
 }
@@ -4215,9 +4224,8 @@ background-color:#0e76a8;
 }
 
 .btn-primary:hover {
-    color: #007e6c;
-    background-color: #fff;
-    border: 1px solid #007e6c;
+    color: #fff;
+    background-color: #056d5e;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     z-index: 2;

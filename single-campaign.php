@@ -20,18 +20,43 @@ require 'pages/header.php'
     </div>
 
     <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blogs-content blogs-content-detail">
-      <div class="detail-info">
-        <iframe width="100%" height="350px"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY">
-      </iframe>
-      <!-- Jika Belum punya video maka diberikan kondisi berikut bisa foto atau video tapi video wajib
-      <div class="detail-mainphoto">
-      <a href=""><img src=""></a>
-    </div>-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Pada slide active merupakan gambar utama yang telah diupload melalui form kampanye baru-->
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="https://d26bwjyd9l0e3m.cloudfront.net/wp-content/uploads/2017/12/HXC-reserach-1.jpg" style="width:100%;height:350px;"  alt="">
+          </div>
+          <div class="item">
+            <div class="detail-info">
+              <iframe width="100%" height="350px"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <!-- Jika Belum punya video maka diberikan kondisi berikut bisa foto atau video tapi video wajib
+            <div class="detail-mainphoto">
+            <a href=""><img src=""></a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+
   <div class="feature">
-
-
 
     <div class="detail-content textalign">
       <i class="fa fa-map-marker" aria-hidden="true"></i> Kategori Usaha

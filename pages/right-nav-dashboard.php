@@ -1,4 +1,4 @@
-<aside class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
   <div class="panel panel-default panel-noborder widget-features">
       <div class="panel-heading">
         Enterpreneur/Investor/Admin
@@ -17,7 +17,7 @@
                   <h5 class="location-name">huseindra@gmail.com</h5>
                 </div>
                 <div style="padding-bottom:10px;"></div>
-                <a href="" class="button-default" style="margin:0px 30%;">Edit Profile</a>
+                <a href="" class="button-default" style="margin: 0px 22%;">Edit Profile</a>
                 <div style="padding-bottom:30px;"></div>
                   <div class="list-group">
                     <a href="#" class="list-group-item active text-center">Dashboard

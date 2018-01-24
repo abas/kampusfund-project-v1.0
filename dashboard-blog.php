@@ -18,7 +18,7 @@ require 'pages/header.php'
 <!-- End of Header -->
 <main>
   <div class="container">
-    <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blogs-content blogs-content-detail" style="float:right;">
+    <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12 blogs-content blogs-content-detail" style="float:right;">
       <div class="row" >
           <div class="col-sm-6">
             <a class="block block-link-hover3 text-center" href="#">
@@ -43,7 +43,9 @@ require 'pages/header.php'
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="false"> Total Post</a></li>
             <li class=""><a href="#tab3default" data-toggle="tab" aria-expanded="false"> Draft </a></li>
+            <!-- Pada draft User pada tabel asksi hanya bisa mengakses button edit saja,untuk accept dan delete hanya dimiliki oleh admin-->
             <li class=""><a href="#tab4default" data-toggle="tab" aria-expanded="false"> Blocked Blog </a></li>
+            <!-- Pada blokced post hanya dimiliki oleh admin-->
           </ul>
         </div>
         <div class="panel-body">

@@ -52,7 +52,7 @@
         <li class="bigger">
           <div class="media">
             <div class="media-body">
-              <div class="avatar">
+              <div class="avatar-campaign">
                 <img class="img-circle" src="assets/images/teams/team1.jpg">
               </div>
               <div style="padding-bottom:10px;"></div>

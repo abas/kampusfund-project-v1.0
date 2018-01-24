@@ -18,7 +18,7 @@ require 'pages/header.php'
 <!-- End of Header -->
 <main>
   <div class="container">
-    <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blogs-content blogs-content-detail" style="float:right;">
+    <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12 blogs-content blogs-content-detail" style="float:right;">
       <h3> Edit Profile Studentpreneur</h3>
       <form>
         <fieldset>
@@ -57,6 +57,17 @@ require 'pages/header.php'
             <label for="exampleInputEmail1">Alamat Asal</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nomor Hp">
               <small id="fileHelp" class="form-text text-muted">Alamat rumah anda</small>
+          </div>
+          <label for="exampleInputEmail1">Alamat Sosial Media</label>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Instagram</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nomor Hp">
+              <small id="fileHelp" class="form-text text-muted">Alamat instagram anda atau bisnis anda untuk menambah kepercayaan investor</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Linkedin</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nomor Hp">
+              <small id="fileHelp" class="form-text text-muted">Masukan alamat profile linkedin anda untuk menambah kepercayaan investor</small>
           </div>
           <div class="form-group">
             <label for="exampleInputFile">File Foto Profile</label>

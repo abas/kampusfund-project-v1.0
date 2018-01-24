@@ -18,7 +18,7 @@ require 'pages/header.php'
 <!-- End of Header -->
 <main>
   <div class="container">
-    <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blogs-content blogs-content-detail" style="float:right;">
+    <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12 blogs-content blogs-content-detail" style="float:right;">
       <div class="row" >
           <div class="col-sm-6">
             <a class="block block-link-hover3 text-center" href="#">
@@ -61,8 +61,11 @@ require 'pages/header.php'
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="false"> List Usaha</a></li>
             <li class=""><a href="#tab2default" data-toggle="tab" aria-expanded="true"> Proposal Usaha</a></li>
+              <!-- Pada proposal usaha cara kerjanya untuk user , yaitu untuk menerima request dari investor apakah di ijinkan untuk memberikan porposal bisnisnya-->
             <li class=""><a href="#tab3default" data-toggle="tab" aria-expanded="false"> Draft </a></li>
+              <!-- Pada draft user tidak bisa mengakses button delete-->
             <li class=""><a href="#tab4default" data-toggle="tab" aria-expanded="false"> Blocked Usaha </a></li>
+              <!-- Pada blokced Usaha hanya dimiliki oleh admin-->
           </ul>
         </div>
         <div class="panel-body">
@@ -180,7 +183,7 @@ require 'pages/header.php'
                                 </td>
                                 <td>
                                   <button type="button" class="btn btn-secondary" title="Publikasikan"><i class="fa fa-check"></i></button>
-                                  <button type="button" class="btn btn-secondary" title="Edit"><i class="fa fa-times"></i></button>
+                                  <button type="button" class="btn btn-secondary" title="Edit"><i class="fa fa-eye"></i></button>
                                   <button type="button" class="btn btn-secondary" title="Delete"><i class="fa fa-times"></i></button>
                                 </td>
                               </tr>
