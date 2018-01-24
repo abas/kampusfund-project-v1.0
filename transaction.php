@@ -24,7 +24,7 @@ require 'pages/header.php'
       </div>
     </div>
 
-    <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blogs-content blogs-content-detail">
+    <article class="ccol-lg-8 col-md-8 col-sm-8 col-xs-12 blogs-content blogs-content-detail">
       <table class="table table-hover">
         <thead>
           <tr>
