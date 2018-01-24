@@ -3,6 +3,7 @@ require 'pages/header.php'
 ?>
 <div class="detail-header detail-header-aboutus">
             <div class="container">
+                <!-- Tambahkan sebuah uAuth FB dan Google-->
                 <h1>Create new account</h1>
 
                 <ol class="breadcrumb">
