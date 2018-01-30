@@ -1,4 +1,4 @@
-<aside class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
   <div class="panel panel-default panel-noborder widget-features">
     <div class="panel-heading">
       Informasi Transaksi
