@@ -13,7 +13,7 @@
               </div>
               <div style="padding-bottom:10px;"></div>
               <div class="description">
-                <h4 class="location-name">Husein Indra Kusuma </h4>
+                <h4 class="location-name">Husein Indra Kusuma <i class="fa fa-check-circle" style="color:#007e6c;"></i> </h4>
                 <h5 class="location-name">huseindra@gmail.com</h5>
               </div>
               <div style="padding-bottom:10px;"></div>
@@ -22,9 +22,12 @@
               <div class="list-group">
                 <a href="{{route('dashboard')}}" class="list-group-item active text-center">Dashboard
                 </a>
+
                 <a href="{{route('dashboard-campaign')}}" class="list-group-item text-center">Kampanye
                 </a>
                 <a href="{{route('dashboard-blog')}}" class="list-group-item text-center">Blog
+                </a>
+                <a href="#" class="list-group-item text-center">Chatting
                 </a>
                 <a href="#" class="list-group-item text-center">Saldo Anda
                 </a>
