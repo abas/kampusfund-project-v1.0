@@ -22,23 +22,24 @@
               Buat Akun Baru
               <div class="line"></div>
             </h3>
-            <form method="post" id="userRegisterFrm" class="signin-form" name="userRegisterFrm">
+            <form role="form" method="POST" action="{{route('register')}}" class="signin-form" >
+              {{ csrf_field() }}
               <div class="form-group">
                 <label for="exampleInputEmail1">Status Pengguna</label>
-                <select class="form-control select2" name="category">
-                  <option value="0">Pilih Status</option>
-                  <option value="1">Studentpreneur</option>
-                  <option value="2">Investor</option>
+                <select class="form-control select2" name="level">
+                  <option >Pilih Status</option>
+                  <option value="student">Studentpreneur</option>
+                  <option value="investor">Investor</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="usr">Nama Lengkap</label>
-                <input type="text" placeholder="Husein Indra Kusuma" name="fName" class="form-control" required="">
+                <input type="text" placeholder="Husein Indra Kusuma" name="name" class="form-control" required="">
               </div>
 
               <div class="form-group">
                 <label for="usr">Email:</label>
-                <input type="text" placeholder="youremail@domain.com" name="emailId" class="form-control" required="">
+                <input type="text" placeholder="youremail@domain.com" name="email" class="form-control" required="">
               </div>
               <div class="form-group">
                 <label for="pwd">Password:</label>
@@ -46,12 +47,70 @@
               </div>
               <div class="form-group">
                 <label for="pwd">Konfirmasi Password</label>
-                <input type="password" placeholder="* * * * * *" name="repassword" class="form-control" required="">
+                <input type="password" placeholder="* * * * * *" name="password_confirmation" class="form-control" required="">
               </div>
               <div class="form-group">
-                <button type="submit" name="userRegBtn" class="btn btn-lg btn-primary">Buat Akun</button>
+                <button type="submit" class="btn btn-lg btn-primary">Buat Akun</button>
               </div>
             </form>
+            <!-- <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+              {{ csrf_field() }}
+
+              <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                <label for="name" class="col-md-4 control-label">Name</label>
+
+                <div class="col-md-6">
+                  <input placeholder="Your Display Name" id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required
+                    autofocus> @if ($errors->has('name'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('name') }}</strong>
+                  </span>
+                  @endif
+                </div>
+              </div>
+
+              <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                <div class="col-md-6">
+                  <input placeholder="Enter Your Email" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
+                    required> @if ($errors->has('email'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                  </span>
+                  @endif
+                </div>
+              </div>
+
+              <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                <label for="password" class="col-md-4 control-label">Password</label>
+
+                <div class="col-md-6">
+                  <input placeholder="Your Password" id="password" type="password" class="form-control" name="password" required> @if ($errors->has('password'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('password') }}</strong>
+                  </span>
+                  @endif
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                <div class="col-md-6">
+                  <input placeholder="Re-Type Your Password" id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                    required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-6 col-md-offset-4">
+                  <button type="submit" class="btn btn-primary">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </form> -->
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-explain">

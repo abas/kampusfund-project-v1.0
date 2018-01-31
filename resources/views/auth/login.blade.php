@@ -20,16 +20,15 @@
       <div class="detail-signin">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="model-l">
-
-
             <h3 class="under-line">
               Login
               <div class="line"></div>
             </h3>
-            <form method="post" class="signin-form">
+            <form method="post" class="signin-form" action="{{route('login')}}">
+            {{ csrf_field() }}
               <div class="form-group">
                 <label for="usr">Email:</label>
-                <input type="text" placeholder="Your user email id" id="userName" name="userName" class="form-control" required="">
+                <input type="text" placeholder="Your user email id" id="userName" name="email" class="form-control" required="">
               </div>
               <div class="form-group">
                 <label for="pwd">Password:</label>
@@ -43,9 +42,7 @@
             </form>
             <div class="clearfix"></div>
             <form method="post" class="signin-form">
-
               <div class="forgot">
-
                 <div class="form-group">
                   <label for="usr">Masukan alamat email yang akan untuk reset password</label>
                   <input type="text" placeholder="Your user email id" id="userName" name="userName" class="form-control" required="">
@@ -77,7 +74,8 @@
                 <span>02</span>
                 <p>Raw denim cliche lo-fi umami cray incididunt sunt before they sold out. In locavore voluptate assumenda.
                   Non raw denim sapiente aute small batch fap. Viral mollit flexitarian locavore, beard readymade eiusmod
-                  anim.</p>
+                  anim.
+                </p>
               </li>
 
               <li>
