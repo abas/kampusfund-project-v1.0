@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -62,9 +62,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // if($data['status']=='admin'){
+        //     return redirect()->back()->with('msg','you have not permission on this case');
+        // }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            // 'level' => $data['level'],
+            'level' => 'student',
+            'status' => 'unverify',
             'password' => bcrypt($data['password']),
         ]);
     }
