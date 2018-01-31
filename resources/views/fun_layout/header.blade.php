@@ -38,9 +38,9 @@
 
   <!-- Custom style for other home page guides -->
   <link href="{{asset('css/customize.css')}}" rel="stylesheet">
-  <!--Freshchat-->
-  <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
+  <!--Freshchat   -->
+  <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
 </head>
 
@@ -118,8 +118,14 @@
                 </div>
               </li>
               <li class="li-signin">
+              @if(Auth::guest())
                 <a href="{{route('login')}}">
                   <i class="fa fa-user-circle-o" aria-hidden="true"></i> Sign in</a>
+              @else
+                <a href="#">
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{Auth::user()->name}}
+                </a>
+              @endif
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile
@@ -131,9 +137,12 @@
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
-                    <a href="{{route('login')}}">Logout</a>
+                    <a href="{{route('logout')}}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                   </li>
-
+                  </a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                  </form>
                 </ul>
               </li>
 
