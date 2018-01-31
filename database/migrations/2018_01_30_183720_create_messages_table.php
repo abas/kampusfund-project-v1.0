@@ -18,6 +18,9 @@ class CreateMessagesTable extends Migration
             $table->integer('student_id')->nullable();
             $table->integer('investor_id')->nullable();
             $table->string('message')->nullable();
+
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
