@@ -17,7 +17,7 @@ class CreateUniversitiesTable extends Migration
             $table->increments('id');
 
             $table->string('university_name');
-            $table->string('university_adress')
+            $table->string('university_adress');
             $table->timestamps();
         });
     }
