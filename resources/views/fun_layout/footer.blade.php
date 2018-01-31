@@ -76,13 +76,6 @@
   </div>
 </footer>
 
-
-
-<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip"
-  data-placement="left">
-  <span class="glyphicon glyphicon-chevron-up"></span>
-</a>
-
 <!-- End of footer -->
 
 
@@ -165,6 +158,14 @@
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff;color:#fff;}";
     document.body.appendChild(css);
   };
+</script>
+
+<!--Freshchat-->
+<script>
+  window.fcWidget.init({
+    token: "cb5ab096-1847-44ee-b8a5-f6e8b4dfa3b1",
+    host: "https://wchat.freshchat.com"
+  });
 </script>
 </body>
 
