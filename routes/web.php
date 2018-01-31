@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Route::group(['prefix'=>'dashboard','middleware'=>'auth'],function(){
 Route::group(['prefix'=>'dashboard'],function(){
   Route::get('/','DashboardController@dashboard')->name('dashboard');
   Route::group(['prefix'=>'/'],function(){
@@ -32,7 +33,8 @@ Route::group(['prefix'=>'dashboard'],function(){
     Route::group(['prefix'=>'blog'],function(){
       Route::get('/','DashboardController@dashboardBlog')->name('dashboard-blog');
       Route::get('/create','BlogController@create')->name('create-blog');
-    
+      Route::post('/create','BlogController@store')->name('create-blog-post');
+      
     });
     
     Route::group(['prefix'=>'notification'],function(){
@@ -69,7 +71,7 @@ Route::group(['prefix'=>'campaign'],function(){
   Route::get('/{id}/show','CampaignController@show')->name('single-campaign');
 });
 
-Route::group(['prefix'=>'blog'],function(){
+Route::group(['prefix'=>'blogs'],function(){
   Route::get('/','BlogController@index')->name('all-blog');
   Route::get('/{id}/show','BlogController@show')->name('single-blog');
 });

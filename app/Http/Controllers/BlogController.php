@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Blog;
 
 class BlogController extends Controller
 {
@@ -12,8 +13,10 @@ class BlogController extends Controller
      * @return Blog->all
      */
     public function index()
-    {
-        return view('blog');
+    {   
+        $blogs = Blog::all();
+        return $blogs;
+        // return view('blog',compact('blogs'));
     }
 
     /**
@@ -34,7 +37,17 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blog = new Blog;
+        $blog->judul        = $request->judul;
+        $blog->deskripsi    = $request->deskripsi;
+        $blog->cover_file   = $request->cover_file;
+        $blog->category_id  = $request->category_id;
+        $blog->user_id      = $request->user_id;
+        if($blog->save()){
+            return $blog;
+        }else{
+            echo "fail to store";
+        }   
     }
 
     /**
@@ -45,7 +58,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        return view('single-blog');
+        $blog = Blog::find($id);
+        return $blog;
+        // return view('single-blog');
     }
 
     /**
