@@ -38,7 +38,8 @@
 
   <!-- Custom style for other home page guides -->
   <link href="{{asset('css/customize.css')}}" rel="stylesheet">
-
+  <!--Freshchat-->
+  <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
 
 </head>
