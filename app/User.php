@@ -44,10 +44,12 @@ class User extends Authenticatable
             $student = new Student;
             $data = Student::where('user_id','=',$id)->get()->first();
             // return $data->id;
-            if($student->isComplete($data->id)){
-                return true;
-            }else{
-                return false;
+            if($data!=null){
+                if($student->isComplete($data->id)){
+                    return true;
+                }else{
+                    return false;
+                }
             }
         }else if($user_type == 'investor'){
             $investor = new Investor;
@@ -69,12 +71,11 @@ class User extends Authenticatable
         }return false;
     }
 
-    public function isInvestor($id)
+    public static function isInvestor($level)
     {
-        $user = Student::find($id);
-        $level = $user->level;
-        if($level == 'student'){
-            return false;
-        }
+        if($level == 'investor'){
+            return true;
+        }return false;
     }
+
 }
