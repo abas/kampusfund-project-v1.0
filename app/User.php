@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Investor,App\Student;
 
 class User extends Authenticatable
 {
@@ -27,4 +28,53 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // ELOQUENT FUNCTION
+    /**
+     * cip gwe no eloquent e cip, aku rodo ra paham
+     */
+
+    
+    // STATIC FUNCTION
+    public static function isVerify($id)
+    {
+        $user = User::find($id);
+        $user_type = $user->level;
+        if($user_type == 'student'){
+            $student = new Student;
+            $data = Student::where('user_id','=',$id)->get()->first();
+            // return $data->id;
+            if($student->isComplete($data->id)){
+                return true;
+            }else{
+                return false;
+            }
+        }else if($user_type == 'investor'){
+            $investor = new Investor;
+            $data = Investor::where('user_id','=',$id)->get()->first();
+            if($investor->isComplete($data->id)){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    public static function isStudent($level)
+    {
+        if($level == 'student'){
+            return true;
+        }return false;
+    }
+
+    public function isInvestor($id)
+    {
+        $user = Student::find($id);
+        $level = $user->level;
+        if($level == 'student'){
+            return false;
+        }
+    }
 }
