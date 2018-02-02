@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User,App\Investor,App\Student,App\Campaign;
 
 class CampaignController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,7 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        //
+        
     }
     
     /**
@@ -23,6 +29,11 @@ class CampaignController extends Controller
      */
     public function dashboardCampaign()
     {
+        $id = Auth::user()->id;
+        $user = User::find($id)->first();
+        $campaigns = Campaign::all()->where('user_id','=',$id)->first();
+
+        // return $campaigns;
         return view('dashboard.dashboard-campaign');
     }
 
