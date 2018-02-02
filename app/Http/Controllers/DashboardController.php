@@ -17,18 +17,22 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        $id = Auth::user()->id;
-        $user = User::find($id)->first();
+        $user = Auth::user();
         if($this->f_user::isStudent($user->level)){
-            $data = Student::where('user_id','=',$id)->get()->first();
+            $data = Student::where('user_id','=',$user->id)->get()->first();
+        }else if($this->f_user::isInvestor($user->level)){
+            $data = Investor::where('user_id','=',$user->id)->get()->first();
         }
-        
-        // $info = json_encode([$user,$data]);
+
+        $info = [$user,$data];
         $isverif = false;
         if($user->isVerify($user->id)){
             $isverif = true;
         }
         return view('dashboard.dashboard',compact('user','data','isverif'));
+        // return $data;
+        // return $user;
+        return $info;
     }
 
     public function dashboardBlog()
