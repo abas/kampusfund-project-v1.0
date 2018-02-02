@@ -16,14 +16,15 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('univ_id')->nullable();
-            $table->string('username')->unique();
-            $table->string('nim')->unique();
+            $table->string('username')->unique()->nullable();
+            $table->integer('saldo')->default(0)->nullable();
+            $table->string('nim')->unique()->nullable();
             $table->string('university')->nullable();
             $table->string('no_hp')->nullable();
             $table->string('alamat_sekarang')->nullable();
             $table->string('alamat_asal')->nullable();
-            $table->string('link_ig')->unique();
-            $table->string('link_linkedin')->unique();
+            $table->string('instagram_id')->unique()->nullable();
+            $table->string('link_linkedin')->unique()->nullable();
             $table->string('foto_profile')->nullable(); // url file
             $table->string('foto_ktp')->nullable(); // url file
             $table->string('krs')->nullable(); // url file, kartu rencana studi saat ini

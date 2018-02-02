@@ -15,7 +15,7 @@ class CreateInvestorsTable extends Migration
     {
         Schema::create('investors', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username')->unique();
+            $table->string('username')->unique()->nullable();
             $table->string('ktp')->nullable();
             $table->string('no_hp')->nullable();
             $table->integer('invest_min')->default(0);
