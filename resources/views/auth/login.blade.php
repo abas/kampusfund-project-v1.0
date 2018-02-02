@@ -25,7 +25,7 @@
               <div class="line"></div>
             </h3>
             <form method="post" class="signin-form" action="{{route('login')}}">
-            {{ csrf_field() }}
+              {{ csrf_field() }}
               <div class="form-group">
                 <label for="usr">Email:</label>
                 <input type="text" placeholder="Your user email id" id="userName" name="email" class="form-control" required="">
@@ -33,6 +33,13 @@
               <div class="form-group">
                 <label for="pwd">Password:</label>
                 <input type="password" placeholder="* * * * * *" id="password" name="password" class="form-control" required="">
+              </div>
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="remember" {{ old( 'remember') ? 'checked' : '' }}> Remember Me
+                  </label>
+                </div>
               </div>
               <div class="form-group">
                 <button type="submit" name="userRegBtn" class="btn btn-lg btn-primary">Login</button>

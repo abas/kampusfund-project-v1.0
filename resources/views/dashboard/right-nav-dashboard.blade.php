@@ -1,7 +1,7 @@
 <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
   <div class="panel panel-default panel-noborder widget-features">
     <div class="panel-heading">
-      Enterpreneur/Investor/Admin
+      Enterpreneur/{{$user->level}}
     </div>
     <div class="panel-body">
       <ul>
@@ -13,11 +13,14 @@
               </div>
               <div style="padding-bottom:10px;"></div>
               <div class="description">
-                <h4 class="location-name">Husein Indra Kusuma <i class="fa fa-check-circle" style="color:#007e6c;"></i> </h4>
-                <h5 class="location-name">huseindra@gmail.com</h5>
+                <h4 class="location-name">{{$user->name}} 
+                @if($isverif)
+                <i class="fa fa-check-circle" style="color:#007e6c;"></i> </h4>
+                @endif
+                <h5 class="location-name">{{$user->email}}</h5>
               </div>
               <div style="padding-bottom:10px;"></div>
-              <a href="{{route('student-edit'," ghcgf ")}}" class="button-default" style="margin: 0px 22%;">Edit Profile</a>
+              <a href="{{route('student-edit',$data->id)}}" class="button-default" style="margin: 0px 22%;">Edit Profile</a>
               <div style="padding-bottom:30px;"></div>
               <div class="list-group">
                 <a href="{{route('dashboard')}}" class="list-group-item active text-center">Dashboard

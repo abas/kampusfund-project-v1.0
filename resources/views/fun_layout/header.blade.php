@@ -118,14 +118,14 @@
                 </div>
               </li>
               <li class="li-signin">
-              @if(Auth::guest())
+                @if(Auth::guest())
                 <a href="{{route('login')}}">
                   <i class="fa fa-user-circle-o" aria-hidden="true"></i> Sign in</a>
-              @else
+                @else
                 <a href="#">
                   <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{Auth::user()->name}}
                 </a>
-              @endif
+                @endif
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile
@@ -137,10 +137,10 @@
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
-                    <a href="{{route('logout')}}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                   </li>
-                  </a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <input type="hidden" name="remember_token" value="">
                     {{ csrf_field() }}
                   </form>
                 </ul>
