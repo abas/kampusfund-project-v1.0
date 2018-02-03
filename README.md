@@ -19,27 +19,27 @@
 
 ## Kampusfund Installation
 
-> Linux 
+### Linux 
 
-- clone repo and run the kampusfund-install wizard
+> clone repo and run the kampusfund-install wizard
 ``` bash
 git clone https://{username}@bitbucket.org/kampusfund/front-end-kampusfund.git
 cd front-end-kampusfund
 sh kampusfund-install.sh
 ```
 
-> Windows
+### Windows
 
-- cloning repository
+> cloning repository
 ``` winshell
 git clone https://{username}@bitbucket.org/kampusfund/front-end-kampusfund.git
 cd front-end-kampusfund
 ```
-- install the dependency from composer
+> install the dependency from composer
 ```
 composer install
 ```
-- configure environment
+> configure environment
 copy .env.example to root directory folder project, then rename that to .env
 set connection database to your local server
 ```
@@ -50,19 +50,19 @@ DB_DATABASE=kampusfund
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-- generating key
+> generating key
 ```
 php artisan key:generate
 ```
-- migrating table to database
+> migrating table to database
 ```
 php artisan migrate
 ```
-- try to run locally
+> try to run locally
 ```
 php artisan serve
 ```
-- open web browser `localhost:8000`
+> open web browser `localhost:8000`
 
 
 
