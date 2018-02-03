@@ -8,7 +8,7 @@ use App\Blog;
 class BlogController extends Controller
 {
     /**
-     * Display a listing of the blog.
+     * Display a listing of the blog. not on dashboard
      *
      * @return Blog->all
      */
@@ -35,14 +35,14 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
         $blog = new Blog;
-        $blog->judul        = $request->judul;
-        $blog->deskripsi    = $request->deskripsi;
-        $blog->cover_file   = $request->cover_file;
-        $blog->category_id  = $request->category_id;
-        $blog->user_id      = $request->user_id;
+        $blog->judul        = $r->judul;
+        $blog->deskripsi    = $r->deskripsi;
+        $blog->cover_file   = $r->cover_file;
+        $blog->category_id  = $r->category_id;
+        $blog->user_id      = $r->user_id;
         if($blog->save()){
             return $blog;
         }else{
@@ -71,7 +71,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog = Blog::find($id);
+        return $blog;
+        // return view('dashboard.create-blog');
     }
 
     /**
@@ -81,9 +83,16 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $r, $id)
     {
-        //
+        $blog = Blog::find($id);
+        $blog->judul        = $r->judul;
+        $blog->deskripsi    = $r->deskripsi;
+        $blog->cover_file   = $r->cover_file;
+        $blog->category_id  = $r->category_id;
+        $blog->update();
+
+        return $blog;
     }
 
     /**
@@ -94,6 +103,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $blog = Blog::find($id);
+        if($blog->delete()){
+            return "successful deleted!";
+        }return "fail to delete!";
     }
 }
