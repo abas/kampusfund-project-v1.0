@@ -27,7 +27,11 @@ Route::group(['prefix'=>'dashboard'],function(){
     Route::group(['prefix'=>'campaign'],function(){
       Route::get('/','CampaignController@dashboardCampaign')->name('dashboard-campaign');
       Route::get('/create','CampaignController@create')->name('create-campaign');
-      Route::get('/update/{id}','CampaignController@update')->name('update-campaign');
+      Route::post('/create','CampaignController@store')->name('create-campaign-post');
+      Route::get('/{id}/show','CampaignController@show')->name('show-campaign');
+      Route::get('/{id}/edit','CampaignController@edit')->name('update-campaign');
+      Route::post('/{id}/update','CampaignController@update')->name('update-campaign-post');
+      Route::post('/{id}/delete','CampaignController@destroy')->name('update-campaign-delete');
     });
 
     Route::group(['prefix'=>'blog'],function(){
