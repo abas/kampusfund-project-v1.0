@@ -19,7 +19,6 @@ class Campaign extends Model
         't_deskripsi',
         'category_campaign_id',
         'user_id',
-        'user_id'
     ];
 
     protected $hidden = [
@@ -30,5 +29,11 @@ class Campaign extends Model
         'bagi_hasil'
     ];
 
-    
+    // STATIC FUNTION 
+    public static function isMine($user_id,$campaign_user_id)
+    {
+        if($user_id==$campaign_user_id){
+            return true;
+        }return false;
+    }    
 }
