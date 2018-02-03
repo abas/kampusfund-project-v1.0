@@ -18,7 +18,6 @@ echo "status value = $status"
 echo "."
 if [ "$status" = "0" ];then 
 	echo "."
-	echo "MY LORD!!"
 	echo "you got an some error"
   echo "try to ceck your connectivity" 
 else 
@@ -26,6 +25,7 @@ else
   echo "."
 	echo "done installation" 
 fi
+rm -f dummy.log
 
 echo "."
 echo "."
@@ -40,7 +40,7 @@ echo "done configure environment"
 echo "."
 echo "."
 
-echo "generating app-key"
+echo "generating app-key..	"
 php artisan key:generate
 
 echo "."
