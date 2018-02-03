@@ -54,7 +54,7 @@ echo "."
 echo "."
 
 echo "try to running server locally.."
-php artisan server
+php artisan serve	
 
 echo "."
 echo "."
