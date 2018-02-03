@@ -29,7 +29,7 @@ Route::group(['prefix'=>'dashboard'],function(){
       Route::get('/create','CampaignController@create')->name('create-campaign');
       Route::post('/create','CampaignController@store')->name('create-campaign-post');
       Route::get('/{id}/show','CampaignController@show')->name('show-campaign');
-      Route::get('/{id}/edit','CampaignController@edit')->name('update-campaign');
+      Route::get('/{id}/edit','CampaignController@edit')->name('edit-campaign');
       Route::post('/{id}/update','CampaignController@update')->name('update-campaign-post');
       Route::post('/{id}/delete','CampaignController@destroy')->name('update-campaign-delete');
     });
@@ -38,6 +38,11 @@ Route::group(['prefix'=>'dashboard'],function(){
       Route::get('/','DashboardController@dashboardBlog')->name('dashboard-blog');
       Route::get('/create','BlogController@create')->name('create-blog');
       Route::post('/create','BlogController@store')->name('create-blog-post');
+      Route::get('/{id}/show','BlogController@show')->name('show-blog');
+      Route::get('/{id}/edit','BlogController@edit')->name('edit-blog');
+      Route::post('/{id}/update','BlogController@update')->name('update-blog-post');
+      Route::post('/{id}/delete','BlogController@destroy')->name('delete-blog-post');
+
       
     });
     
